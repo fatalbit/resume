@@ -1,0 +1,183 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Eric Liang}} & Email : \href{mailto:ericzhiliang@gmail.com}{ericzhiliang@gmail.com}\\
+  1-646-525-9401 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {NYU Tandon School of Engineering}{Brooklyn, NY}
+      {Bachelor of Science in Computer Science;  GPA: 3.26}{2012 -- 2016}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Raytheon CODEX}{Annapolis Junction, MD}
+      {Senior Cyber Engineer I}{Jan 2016 - Present}
+      \resumeItemListStart
+      \resumeItem{Structured Fuzzing W/ Coverage} {
+        Structured fuzzing with coverage utilizing protobuf and libfuzzer to
+        find memory corruption bugs.
+        Fuzzing harnesses were created to recreate realistic behavior in various
+        remote attack surfaces. 
+        Auditing was done in tandem with harness creation to statically
+        find bugs, understand program design, and model various program states. 
+      }
+      \resumeItem{Grammar Based Fuzzing} {
+        Developed and researched fuzzers that generated syntatically and
+        semantically valid grammar to explore complex program states in target
+        that takes a programming language as an input. Modified popular grammar
+        based fuzzer with compiler phases to have type aware grammar generation,
+        type aware arguments to procedures.
+      }
+      \resumeItem{Code Auditing} { 
+        Audited through modern C++ to look for potential bugs in
+        target application with complex program states. Research was done to
+        understand various APIs that can change said program states and understand various
+        esoteric metalanguages in the codebase.
+      }
+      \resumeItem{N-Day Analysis} {
+        Conducted research and created reports for multiple vulnerabilities.
+        Analyzed usability of vulnerabilities for necessary context required for
+        usage.
+      }
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Raytheon CODEX}{Annapolis Junction, MD}
+      {Vulnerability Researcher Intern}{May 2015 - Aug 2015}
+      \resumeItemListStart
+        \resumeItem{Browser N-Day Research}{
+          Developed and demonstrated a patched remote code execution utilizing a
+          use-after-free bug in Internet Explorer 9's Document Object Model.
+          Development required grooming of the Window's Low Fragmentation Heap,
+          a heap spray (32-bit address space at the time), and
+          return orientated programming to pivot to shellcode execution.
+        }
+        \resumeItem{Coverage Guided Feedback} {
+          Created an intel pintool for coveraged guided feedback on a target
+          application. Work was done to record all basic blocks reached by
+          user input and aggregate coverage results.
+        }
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%#--------TECHNICAL SKILLS------------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Python, Javascript, C++14, C, Bash}
+      \hfill
+    }
+    \item{
+      \textbf{Architectures}{: x86, x86-64, ARM}
+      \hfill
+    }
+    \item{
+      \textbf{Tools}{: IDA Pro, libfuzzer, AFL, protobuf-mutator, gdb,
+      adb, frida, git, docker}
+      \hfill
+    }
+    \item{
+      \textbf{Skills}{: Reverse Enginnering, Code Auditing, Shellcoding, Remote
+      Code Execution, Sandbox Escape, IPC, Return Oriented Programming, Heapspray, 
+      JIT, Heap Grooms, Exploit Development }
+      \hfill
+    }
+    \item {
+      \textbf{Systems}{: Linux, Android, Windows, Mac}
+      \hfill
+    }
+  \resumeSubHeadingListEnd
+
+\section{Miscellaneous}
+  \resumeSubHeadingListStart
+  \item{
+      {2018 DEFCON CTF Finalist with Spaceballs(NasaRejects)}
+    \hfill
+  }
+  \item{
+      {CTF hobbyist}
+    \hfill
+  }
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
