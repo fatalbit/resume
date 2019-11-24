@@ -1,0 +1,59 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Work Experience}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Senior Cyber Engineer I} % Job title
+    {Raytheon CODEX} % Organization
+    {Annapolis Junction, Maryland} % Location
+    {Jan. 2017 - Present} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Structured Fuzzing W/ Coverage}
+        \begin{itemize}
+          \item {Structured fuzzing with coverage utilizing protobuf and libfuzzer to find memory corruption bugs. Fuzzing harnesses were created to recreate realistic behavior in various remote attack surfaces.  Auditing was done in tandem with harness creation to statically find bugs, understand program design, and model various program states. }
+        \end{itemize}
+        \item {Grammar Based Fuzzing}
+        \begin{itemize}
+          \item {Developed and researched fuzzers that generated syntatically and semantically valid grammar to explore complex program states in target that takes a programming language as input. Modified popular grammar based fuzzer with compiler phases to have type aware grammar generation, and type aware arguments for procedure calls.}
+        \end{itemize}
+        \item {Code Auditing}
+        \begin{itemize}
+          \item {Audited through modern C++ to look for potential bugs in target application with complex program states. Research was done to understand various APIs that can change said program states and understand various esoteric metalanguages in the codebase.}
+        \end{itemize}
+        \item {N-Day Analysis}
+        \begin{itemize}
+          \item {Conducted research and created reports for multiple vulnerabilities. Analyzed usability of vulnerabilities for necessary context required for usage.}
+        \end{itemize}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Vulnerability Research Intern} % Job title
+    {Raytheon CODEX} % Organization
+    {Annapolis Junction, Maryland} % Location
+    {May 2015 - Aug. 2015} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Browser N-Day Research}
+        \begin{itemize}
+          \item {Developed and demonstrated a patched remote code execution utilizing a use-after-free bug in Internet Explorer 9's Document Object Model. Development required grooming of the Window's Low Fragmentation Heap, a heap spray (32-bit address space at the time), and return orientated programming to pivot to shellcode execution.}
+        \end{itemize}
+        \item {Coverage Guided Feedback Tool}
+        \begin{itemize}
+          \item {Created an intel pintool for coveraged guided feedback on a target application. Work was done to record all basic blocks reached by user input and aggregate coverage results.}
+        \end{itemize}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
